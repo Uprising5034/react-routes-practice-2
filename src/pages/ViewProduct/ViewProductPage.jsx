@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from "react-router-dom";
 
 function ViewProductPage(props) {
   const [product, setProduct] = useState(null);
@@ -29,6 +29,9 @@ function ViewProductPage(props) {
     <div>
       <h2>{product.name}</h2>
       <p>£{product.price}</p>
+      <Link to={`/products/${product.id}/edit`} state={{ product }}>
+        Edit
+      </Link>
     </div>
   );
 }
