@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 function ProductsPage(props) {
-  console.log("Inside ProductsPage: ", { props });
+  console.log("ProductsPage()")
 
   const { products } = props;
 

@@ -11,7 +11,7 @@ export default function App() {
   const [products, setProducts] = useState(productsData);
   const [apps, setApps] = useState(appsData);
 
-  console.log({ products, apps });
+  console.log("App()")
 
   return (
     <div className="App">

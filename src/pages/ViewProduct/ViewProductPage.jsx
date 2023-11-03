@@ -4,7 +4,7 @@ import { useLocation, Link } from "react-router-dom";
 function ViewProductPage(props) {
   const [product, setProduct] = useState(null);
 
-  console.log("ViewProductPage")
+  console.log("ViewProductPage()")
 
   //Ask React for the location object
   const location = useLocation();

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useLocation } from "react-router-dom";
 
 function EditProductPage({products, setProducts}) {
-  console.log("EditProductPage")
+  console.log("EditProductPage()")
 
   const [productToUpdate, setProductToUpdate] = useState(null);
 
@@ -40,7 +40,9 @@ function EditProductPage({products, setProducts}) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h3>{location.state.product.name}</h3>
+      <h3>Products[0] - {products[0].name}</h3>
+      <h3>location.state.product.name - {location.state.product.name}</h3>
+      <h3>productToUpdate.name - {productToUpdate.name}</h3>
       <label htmlFor="name">Product Name</label>
       <input
         type="text"
