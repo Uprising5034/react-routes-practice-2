@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useLocation } from "react-router-dom";
 
 function EditProductPage({products, setProducts}) {
+  console.log("EditProductPage")
 
   const [productToUpdate, setProductToUpdate] = useState(null);
 
@@ -35,13 +36,11 @@ function EditProductPage({products, setProducts}) {
     setProducts([...products])
   }
 
-  console.log('productToUpdate', productToUpdate)
-  console.log('products', products)
-
   if (!productToUpdate) return <div>Loading...</div>;
 
   return (
     <form onSubmit={handleSubmit}>
+      <h3>{location.state.product.name}</h3>
       <label htmlFor="name">Product Name</label>
       <input
         type="text"
